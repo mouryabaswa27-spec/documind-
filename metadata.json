@@ -1,0 +1,8 @@
+{
+  "name": "DocuMind - Intelligent Document Processing & Audit Assistant",
+  "description": "Autonomous document processing and review platform with visual X-Ray heatmap, clause-level traceability, redline diff matrix, and compliance auditing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

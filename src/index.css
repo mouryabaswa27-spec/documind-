@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Lexend', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Lexend', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  [data-font="lexend"] {
+    --font-sans: 'Lexend', sans-serif;
+    --font-display: 'Lexend', sans-serif;
+  }
+
+  [data-font="dmsans"] {
+    --font-sans: 'DM Sans', sans-serif;
+    --font-display: 'DM Sans', sans-serif;
+  }
+
+  [data-font="system"] {
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-display: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.62;
+    letter-spacing: -0.008em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Accessible text size scaling */
+.text-size-normal {
+  font-size: 14px;
+}
+
+.text-size-relaxed {
+  font-size: 15.5px;
+}
+
+.text-size-large {
+  font-size: 17px;
+}
+
+/* Custom gentle scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.55);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* react-pdf Document & Page canvas rendering styles */
+.react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.react-pdf__Page {
+  position: relative;
+  max-width: 100%;
+}
+
+.react-pdf__Page__canvas {
+  max-width: 100%;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.react-pdf__Page__textContent,
+.react-pdf__Page__annotations {
+  display: none;
+}
+
+
